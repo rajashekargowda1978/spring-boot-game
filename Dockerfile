@@ -1,4 +1,4 @@
 FROM openjdk:8
-VOLUME c:/tmp
-COPY target/spring-boot-game.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+EXPOSE 8085
+ADD ./target/spring-boot-game.jar spring-boot-game.jar
+ENTRYPOINT ["java", "-jar", "/spring-boot-game.jar"]
